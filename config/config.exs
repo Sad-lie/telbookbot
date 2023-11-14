@@ -22,6 +22,7 @@ config :telbookbot, TelbookbotWeb.Endpoint,
   pubsub_server: Telbookbot.PubSub,
   live_view: [signing_salt: "MJjyVExq"]
 
+
 config :telbookbot ,Telbookbot.Telegram,
  token: "6572036459:AAHCV5wzjPtrq1nBzodbzhDpkROpZkHQrho"
 # Configures the mailer

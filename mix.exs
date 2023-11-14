@@ -29,9 +29,12 @@ defmodule Telbookbot.MixProject do
 
   # Specifies your project dependencies.
   #
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 2ecc441 (database)
   # Type `mix help deps` for examples and options.
   defp deps do
     [
