@@ -54,7 +54,10 @@ defmodule Telbookbot.MixProject do
       {:telegram, github: "visciang/telegram",branch: "master"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:waffle, "~> 1.1"},
+      {:waffle_ecto, "~> 0.0"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 

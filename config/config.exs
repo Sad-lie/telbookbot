@@ -6,6 +6,10 @@
 
 # General application configuration
 import Config
+config :waffle,
+  storage: Waffle.Storage.Local
+  #asset_host: "http://static.example.com" # or {:system, "ASSET_HOST"}
+
 
 config :telbookbot,
   ecto_repos: [Telbookbot.Repo],
