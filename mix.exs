@@ -29,6 +29,9 @@ defmodule Telbookbot.MixProject do
 
   # Specifies your project dependencies.
   #
+
+
+
   # Type `mix help deps` for examples and options.
   defp deps do
     [
@@ -48,6 +51,7 @@ defmodule Telbookbot.MixProject do
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
+      {:telegram, github: "visciang/telegram",branch: "master"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"}

@@ -21,9 +21,11 @@ defmodule TelbookbotWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", TelbookbotWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", TelbookbotWeb do
+    pipe_through :api
+    post "/telegram" ,
+    TelegramController , :handle_message
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:telbookbot, :dev_routes) do
