@@ -21,7 +21,11 @@ config :telbookbot, TelbookbotWeb.Endpoint,
   ],
   pubsub_server: Telbookbot.PubSub,
   live_view: [signing_salt: "MJjyVExq"]
-
+# in each environment config file you should overwrite this if it's external
+config :guardian, Guardian,
+  issuer: "MyAppId",
+  secret_key: Mix.env(),
+  serializer: TelBookBot.GuardianSerialize
 
 config :telbookbot ,Telbookbot.Telegram,
  token: "6572036459:AAHCV5wzjPtrq1nBzodbzhDpkROpZkHQrho"

@@ -12,8 +12,17 @@ defmodule TelbookbotWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
+  end
+  pipeline :maybe_browser_auth do
+    plug(Guardian.Plug.VerifySession)
+    plug(Guardian.Plug.VerifyHeader, realm: "Bearer")
+    plug(Guardian.Plug.LoadResource)
   end
 
+  pipeline :ensure_authed_access do
+    plug(Guardian.Plug.EnsureAuthenticated, %{"typ" => "access", handler: TelBookBot.HttpErrorHandler})
+  end
   scope "/", TelbookbotWeb do
     pipe_through :browser
 
