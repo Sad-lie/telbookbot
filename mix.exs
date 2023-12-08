@@ -28,14 +28,7 @@ defmodule Telbookbot.MixProject do
   defp elixirc_paths(_), do: ["lib"]
 
   # Specifies your project dependencies.
-  #
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 2ecc441 (database)
-  # Type `mix help deps` for examples and options.
   defp deps do
     [
       {:phoenix, "~> 1.7.10"},
